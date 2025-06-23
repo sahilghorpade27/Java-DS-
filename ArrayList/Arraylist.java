@@ -11,9 +11,14 @@ public class Arraylist {
 
         list.addFirst(12);
 
-        System.out.println(list);
+        
 
         System.out.println(list.contains(4));
+
+        list.add(0,0);
+        System.out.println(list);
+
+        System.out.println(list.size());
 
     }
 }
