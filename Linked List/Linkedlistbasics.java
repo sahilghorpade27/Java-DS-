@@ -75,34 +75,39 @@ public class Linkedlistbasics {
         return -1;
     }
 
-    public void removeFirst() {
+    public int removeFirst() {
         if (head == null) {
             System.out.println("List is empty");
-            return;
+            return Integer.MIN_VALUE ;
         }
         size--;
+        int val = head.data ;
         head = head.next;
         if (head == null) {
             tail = null;
         }
+        return val ;
     }
 
-    public void removeLast() {
+    public int removeLast() {
         if (head == null) {
             System.out.println("List is empty");
-            return;
+            return Integer.MIN_VALUE ;
         }
         size--;
         if (head.next == null) {
             head = tail = null;
-            return;
+            return Integer.MIN_VALUE ;
         }
+        int val = tail.data ;
         Node temp = head;
         while (temp.next != tail) {
             temp = temp.next;
         }
         temp.next = null;
         tail = temp;
+        return val ;
+
     }
 
     public int helper(Node head , int key){

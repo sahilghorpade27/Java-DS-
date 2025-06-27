@@ -30,6 +30,6 @@ public class maxcontainer {
                 rp-- ;
             }
         }
-        System.out.println(totArea );
+        System.out.println(totArea     );
     }
 }
