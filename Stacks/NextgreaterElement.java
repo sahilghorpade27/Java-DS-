@@ -6,13 +6,12 @@ public class NextgreaterElement {
         Stack<Integer> s = new Stack<>();
         int n = arr.length ;
         for(int i=n-1 ; i>=0 ; i--){
-            while( !s.isEmpty() && arr[s.peek()] < arr[i]){
+            while(! s.isEmpty() && arr[s.peek()] < arr[i]){
                 s.pop();
             }
             if(s.isEmpty()){
                 greater[i] = -1 ;
-            }
-            else{
+            }else{
                 greater[i] = arr[s.peek()];
             }
             s.push(i);
@@ -38,6 +37,6 @@ public class NextgreaterElement {
         //     System.out.print(greater[i]+" ");
         // }
 
-        // nextgreater(arr, greater);
+        nextgreater(arr, greater);
     }
 }

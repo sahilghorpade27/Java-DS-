@@ -9,6 +9,7 @@ public class PushatBottom{
         int top = s.pop();
         pushatbottom(s, data);
         s.push(top);
+
     }
     public static void main(String[] args) {
         Stack <Integer> s = new Stack<>() ;

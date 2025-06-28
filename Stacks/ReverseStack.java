@@ -1,22 +1,50 @@
 import java.util.Stack; 
 public class ReverseStack {
-    public static void pushatbottom(Stack <Integer> s ,  int data){
+    // public static void pushatbottom(Stack <Integer> s ,  int data){
+    //     if(s.isEmpty()){
+    //         s.push(data);
+    //         return ;
+    //     }
+    //     int top = s.pop();
+    //     pushatbottom(s, data);
+    //     s.push(top);
+    // }
+
+    // public static void reverseStack(Stack<Integer> stack) {
+    //     if(stack.isEmpty()) {
+    //         return;
+    //     }
+    //     int top = stack.pop();
+    //     reverseStack(stack);
+    //     pushatbottom(stack, top);
+    // }
+    // public static void printStack(Stack<Integer> stack) {
+    //     while(!stack.isEmpty()) {
+    //         System.out.println(stack.peek());
+    //         stack.pop();
+    //     }
+    // }
+
+
+
+    public static void pushatbottom(Stack<Integer> s , int data){
         if(s.isEmpty()){
             s.push(data);
             return ;
         }
         int top = s.pop();
-        pushatbottom(s, data);
+        pushatbottom(s,data);
         s.push(top);
+
     }
 
-    public static void reverseStack(Stack<Integer> stack) {
-        if(stack.isEmpty()) {
-            return;
+    public static void reverseStack(Stack<Integer> st){
+        if(st.isEmpty()){
+            return ;
         }
-        int top = stack.pop();
-        reverseStack(stack);
-        pushatbottom(stack, top);
+        int top = st.pop();
+        reverseStack(st);
+        pushatbottom(st, top);
     }
     public static void printStack(Stack<Integer> stack) {
         while(!stack.isEmpty()) {
@@ -34,6 +62,5 @@ public class ReverseStack {
 
         reverseStack(stack);
         printStack(stack);
-
      }
 }
