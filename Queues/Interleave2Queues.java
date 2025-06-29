@@ -6,11 +6,12 @@ public class Interleave2Queues {
     public static void interleave(Queue<Integer> q){
         Queue<Integer> firsthalf = new LinkedList<>();
 
-        int size = q.size() ;
-        for(int i=0 ; i< size/2 ; i++){
+        int s = q.size() ;
+
+        for(int i= 0 ; i< s/2 ; i++){
             firsthalf.add(q.remove());
         }
-        while(! firsthalf.isEmpty()){
+        while (! firsthalf.isEmpty()) {
             q.add(firsthalf.remove());
             q.add(q.remove());
         }

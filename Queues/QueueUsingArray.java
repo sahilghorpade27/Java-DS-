@@ -3,23 +3,29 @@ public class QueueUsingArray {
         static int size ;
         static int arr[] ;
         static int rear ;
+        static int front ;
 
         Queue(int n){
             arr = new int[n] ;
             size = n ;
             rear = -1 ;
+            front = -1 ;
         }
 
         public static boolean isEmpty(){
-            return rear == -1 ;
+            return rear == -1 && front == -1 ;
         }
 
         public static void add(int data){
-            if(rear == size-1){
+            if(ifFull()){
                 System.out.println("Queue is Full");
                 return ;
             }
-            arr[++rear] = data ;
+            if(front == -1){
+                front =0;                
+            }
+            rear = (rear+1) % size ;
+            arr[rear] = data ;
 
         }
 
@@ -33,6 +39,10 @@ public class QueueUsingArray {
             }
             rear-- ;
             return front ;
+        }
+
+        public static boolean ifFull(){
+            return (rear+1)%size == front ;
         }
 
         public static int peek(){
