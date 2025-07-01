@@ -8,6 +8,8 @@ public class UnionandIntersection {
 
         HashSet <Integer> un = new HashSet<>();
         HashSet <Integer> a1 = new HashSet<>();
+        HashSet <Integer> a2 = new HashSet<>();
+        HashSet <Integer> in = new HashSet<>();
         
         
 
@@ -17,19 +19,27 @@ public class UnionandIntersection {
         }
         for(int i=0 ; i< arr2.length ; i++){
             un.add(arr2[i]);
+            a2.add(arr2[i]);
         }
         System.out.println("Union : "+un);
 
         int size = 0 ;
 
+        // for(int i=0 ; i< arr2.length ; i++){
+        //     int ch = arr2[i] ;
+        //     if(a1.contains(ch)){
+        //         size++ ;
+        //         a1.remove(ch);
+        //     }
+        // }
+
         for(int i=0 ; i< arr2.length ; i++){
             int ch = arr2[i] ;
             if(a1.contains(ch)){
-                size++ ;
-                a1.remove(ch);
+                in.add(ch);
             }
         }
-        System.out.println(size);
+        System.out.println(in);
 
 
 

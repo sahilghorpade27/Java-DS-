@@ -1,34 +1,28 @@
 
-import java.util.HashMap;
+import java.util.*;
 
 public class ValidAnagram {
     public static void main(String[] args) {
-        String s = "Knee" ;
-        String t = "Keene" ;
+        String s = "sahil" ;
+        String t = "lihsa" ;
         HashMap <Character , Integer > hm = new HashMap<>() ;
 
         for(int i=0 ; i< s.length() ; i++){
-            if(hm.containsKey(s.charAt(i))){
-                hm.put(s.charAt(i),hm.get(s.charAt(i))+1) ;
-            }
-            else{
-                hm.put(s.charAt(i), 1);
-            }
+            hm.put(s.charAt(i), hm.getOrDefault(s.charAt(i), 0)+1);
         }
         for(int i=0 ; i< t.length() ; i++){
-            char c = t.charAt(i);
-            if(hm.containsKey(c)){
-                hm.put(t.charAt(i),hm.get(t.charAt(i))-1) ;
-                if(hm.get(c) == 0 ){
-                    hm.remove(c);
-                }
-            }
-            else{
-                System.out.println(false);
+            hm.put(t.charAt(i), hm.getOrDefault(t.charAt(i), 0)-1);
+        }
+
+        Set<Character> set = hm.keySet();
+        for(Character c : set ){
+            if(hm.get(c) != 0){
+                System.out.println("False");
                 return ;
             }
-            
         }
+
+        System.out.println("True ");
         
     }
 }

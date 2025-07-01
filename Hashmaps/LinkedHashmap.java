@@ -1,8 +1,6 @@
 import java.util.* ;
 import java.util.LinkedHashMap;
 
-import Hashmaplementation.Hashmap;
-
 public class LinkedHashmap {
     public static void main(String[] args) {
         LinkedHashMap <String , Integer> lhm = new LinkedHashMap<>();
@@ -21,9 +19,11 @@ public class LinkedHashmap {
 
 
         TreeMap <String,Integer> tm = new TreeMap<>();
+        tm.put("yash",100);
         tm.put("Sahil", 10);
         tm.put("Akku", 2);
         tm.put("Bob", 12);
+        
 
         System.out.println(tm);
 

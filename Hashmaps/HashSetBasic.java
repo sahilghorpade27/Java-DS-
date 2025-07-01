@@ -1,5 +1,5 @@
 
-import java.util.HashSet;
+import java.util.*;
 import java.util.LinkedHashSet;
 import java.util.TreeSet;
 
@@ -9,9 +9,10 @@ public class HashSetBasic {
         set.add(1);
         set.add(2);
         set.add(1);
-        set.add(3);
+        
         set.add(4);
         set.add(2);
+        set.add(3);
 
         System.out.println(set);
 
@@ -21,10 +22,10 @@ public class HashSetBasic {
         // //set.clear();
         // System.out.println(set.size());
 
-        // Iterator i = set.iterator();
-        // while(i.hasNext()){
-        //     System.out.println(i.next());
-        // }
+        Iterator i = set.iterator();
+        while(i.hasNext()){
+            System.out.print(i.next());
+        }
 
         // LinkedHashSet<Integer> lhs = new LinkedHashSet<>();
         // lhs.add(1);
@@ -55,6 +56,15 @@ public class HashSetBasic {
         // ts.add(2);
 
         // System.out.println(ts);
+
+        TreeSet<Integer> s = new TreeSet<>();
+        s.add(1);
+        s.add(4);
+        s.add(2);
+        s.add(8);
+        s.add(3);
+
+        System.out.println(s);
 
 
     }

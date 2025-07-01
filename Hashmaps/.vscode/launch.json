@@ -1,0 +1,84 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "HashBasic",
+            "request": "launch",
+            "mainClass": "HashBasic",
+            "projectName": "Hashmaps_97c3e232"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Basic",
+            "request": "launch",
+            "mainClass": "Basic",
+            "projectName": "Hashmaps_97c3e232"
+        },
+        {
+            "type": "java",
+            "name": "CountDistinct",
+            "request": "launch",
+            "mainClass": "CountDistinct",
+            "projectName": "Hashmaps_97c3e232"
+        },
+        {
+            "type": "java",
+            "name": "HashSetBasic",
+            "request": "launch",
+            "mainClass": "HashSetBasic",
+            "projectName": "Hashmaps_97c3e232"
+        },
+        {
+            "type": "java",
+            "name": "Hashmaplementation",
+            "request": "launch",
+            "mainClass": "Hashmaplementation",
+            "projectName": "Hashmaps_97c3e232"
+        },
+        {
+            "type": "java",
+            "name": "LinkedHashmap",
+            "request": "launch",
+            "mainClass": "LinkedHashmap",
+            "projectName": "Hashmaps_97c3e232"
+        },
+        {
+            "type": "java",
+            "name": "LoopsinHM",
+            "request": "launch",
+            "mainClass": "LoopsinHM",
+            "projectName": "Hashmaps_97c3e232"
+        },
+        {
+            "type": "java",
+            "name": "MajorityElement",
+            "request": "launch",
+            "mainClass": "MajorityElement",
+            "projectName": "Hashmaps_97c3e232"
+        },
+        {
+            "type": "java",
+            "name": "UnionandIntersection",
+            "request": "launch",
+            "mainClass": "UnionandIntersection",
+            "projectName": "Hashmaps_97c3e232"
+        },
+        {
+            "type": "java",
+            "name": "ValidAnagram",
+            "request": "launch",
+            "mainClass": "ValidAnagram",
+            "projectName": "Hashmaps_97c3e232"
+        }
+    ]
+}

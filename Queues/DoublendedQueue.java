@@ -17,6 +17,7 @@ public class DoublendedQueue {
 
         System.out.println(q.getFirst());
         System.out.println(q.getLast());
+        
 
 
     }

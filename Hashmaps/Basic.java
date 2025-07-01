@@ -1,4 +1,4 @@
-import java.util.HashMap;
+import java.util.*;
 
 public class Basic {
     public static void main(String[] args) {
@@ -10,17 +10,28 @@ public class Basic {
         System.out.println(hm);
 
         int population = hm.get("China");
-        System.out.println(population);
+        // System.out.println(population);
 
-        System.out.println(hm.containsKey("China"));
+        // System.out.println(hm.containsKey("China"));
 
 
-        System.out.println(hm.remove("China"));
+        // System.out.println(hm.remove("China"));
 
-        System.out.println(hm);
+        // System.out.println(hm);
 
-        System.out.println(hm.size());
+        // System.out.println(hm.size());
 
-        System.out.println(hm.isEmpty());
+        // System.out.println(hm.isEmpty());
+
+        Set<String> keys = hm.keySet();
+        System.out.print(keys);
+
+        for( String k : keys){
+            System.out.println("Key : "+k+" , Value : "+hm.get(k));
+        }
+
+
+
+
     }
-}
+} 
