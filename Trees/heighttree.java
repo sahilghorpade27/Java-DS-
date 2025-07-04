@@ -1,4 +1,4 @@
-public class heighttree {
+public class heighttree { 
     public static class Node{
         int data ;
         Node left ;
@@ -43,15 +43,17 @@ public class heighttree {
 
     public static int diameter(Node root){
         if(root == null){
-            return 0 ;
+            return 0;
         }
-        int leftdiam = diameter(root.left);
-        int rightdiam = diameter(root.right);
-        int rh = calcheight(root.right);
+        int ld = diameter(root.left);
+        int rd = diameter(root.right);
         int lh = calcheight(root.left);
-        int selfdiam = rh + lh + 1 ;
+        int rh = calcheight(root.right);
+        int selfdiam = lh + rh + 1;
 
-        return Math.max(selfdiam , Math.max(leftdiam,rightdiam));
+        return Math.max(selfdiam , Math.max(ld,rd));
+
+            
     }
     public static boolean isidentical(Node node , Node subroot){
         if(node == null && subroot ==  null){
@@ -80,16 +82,31 @@ public class heighttree {
  
     public static void main(String[] args) {
         Node root = new Node(1);
-        root.right = new Node(3);
-        root.left = new Node(2);
-        root.left.left = new Node(4);
-        root.left.right = new Node(5);
-        root.right.left = new Node(6);
-        root.right.right = new Node(7);
+
+    // Level 1
+    root.left = new Node(2);
+    root.right = new Node(3);
+    
+    // Level 2
+    root.left.left = new Node(4);
+    root.left.right = new Node(5);
+    root.right.left = new Node(6);
+    root.right.right = new Node(7);
+
+     // Level 3
+    root.left.left.left = new Node(8);
+
+    // Level 4 to 7 (Right-heavy branch)
+    root.left.left.right = new Node(0);  // Optional placeholder if you need one
+    root.left.left.right.right = new Node(9);
+    root.left.left.right.right.right = new Node(10);
+    root.left.left.right.right.right.right = new Node(11);
+    root.left.left.right.right.right.right.right = new Node(12);
+
 
         // System.out.println(calcsumnodes(root));
 
-        // System.out.println(diameter(root));
+        System.out.println(diameter(root));
 
 
         //-----------------------------------------------------/////////

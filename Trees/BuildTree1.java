@@ -17,13 +17,14 @@ public class BuildTree1 {
         static class Bt {
             static int idx = -1 ;
             public static Node buildTree(int nodes[]){
-                idx ++ ;
+                idx++ ;
                 if(nodes[idx] == -1){
                     return null ;
                 }
+
                 Node newNode = new Node(nodes[idx]);
-                newNode.left = buildTree(nodes) ;
-                newNode.right = buildTree(nodes) ;
+                newNode.left = buildTree(nodes);
+                newNode.right = buildTree(nodes);
 
                 return newNode ;
             }
@@ -67,22 +68,20 @@ public class BuildTree1 {
             q.add(null);
 
             while(! q.isEmpty()){
-                Node currNode = q.remove();
+                Node currNode = q.remove() ;
                 if(currNode == null){
                     System.out.println();
                     if(! q.isEmpty()){
-                        q.add(null);
+                        q.add(null);                    
                     }
-                }
-                else{
-                    System.out.print(currNode.data+" ");
+                }else{
+                    System.out.print(currNode.data);
                     if(currNode.left != null){
                         q.add(currNode.left);
                     }
                     if(currNode.right != null){
-                        q.add(currNode.right) ;
+                        q.add(currNode.right);
                     }
-
                 }
             }
 
@@ -91,14 +90,14 @@ public class BuildTree1 {
 
     public static void main(String[] args) {
         int nodes[] = {1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1} ;
-       Bt tree = new Bt() ;
+        Bt tree = new Bt() ;
         Node root = tree.buildTree(nodes) ;
-        // System.err.println(root.data);
+        System.out.println(root.data);
 
         // preorder(root);
         // inorder(root);
         // postorder(root);
 
-        // levelorder(root);
+        levelorder(root);
     }
 }
