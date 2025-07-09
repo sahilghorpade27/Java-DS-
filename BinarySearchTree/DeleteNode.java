@@ -38,7 +38,7 @@ public class DeleteNode {
             root.right = delete(root.right , val) ;
         }
         else if(root.data > val){
-            root.left = delete(root.left , val) ;
+              root.left = delete(root.left , val) ;
         }
         else{
             //case 1: No child

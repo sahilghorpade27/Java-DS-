@@ -40,14 +40,14 @@ public class BuildBST{
         if(root.data == key){
             return true ;
         }
-
-        if(root.data <key){
+        if(root.data < key){
             return searchinbst(root.right, key);
         }
         if(root.data > key){
             return searchinbst(root.left, key);
         }
         return false ;
+
     }
 
 
